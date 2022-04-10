@@ -51,4 +51,39 @@ public class ArraysMain {
         }
         return Arrays.deepToString(multiplicationTable);
     }
+
+    public boolean sameTempValues(double[] day, double[] anotherDay) {
+        return Arrays.equals(day, anotherDay);
+
+    }
+
+    public boolean sameTempValuesDaylight(double[] day, double[] anotherDay) {
+        int min = min(day.length, anotherDay.length);
+        double[] rangeOfDay = Arrays.copyOfRange(day, 0, min);
+        double[] rangeOfAnotherDay = Arrays.copyOfRange(anotherDay, 0, min);
+        return Arrays.equals(rangeOfDay, rangeOfAnotherDay);
+    }
+
+    private int min(int a, int b) {
+        if (a < b) {
+            return a;
+        } else {
+            return b;
+        }
+    }
+
+    public boolean wonLottery(int[] winner, int[] stake) {
+
+//        Arrays.sort(winner);
+//        Arrays.sort(stake);
+//        return Arrays.equals(winner, stake);
+
+        int[] copyOfWinner = Arrays.copyOf(winner, winner.length);
+        int[] copyOfStake = Arrays.copyOf(stake, stake.length);
+        Arrays.sort(copyOfWinner);
+        Arrays.sort(copyOfStake);
+        return Arrays.equals(copyOfWinner, copyOfStake);
+    }
+
+
 }
