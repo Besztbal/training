@@ -2,10 +2,10 @@ package arrayofarrays;
 
 public class Rectangle {
 
-    public void  rectangularMatrix(int size) {
-        int[][] rectangularMatrix = new int[size][size];
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
+    public void  rectangularMatrix(int sizeA, int sizeB) {
+        int[][] rectangularMatrix = new int[sizeA][sizeB];
+        for (int i = 0; i < sizeA; i++) {
+            for (int j = 0; j < sizeB; j++) {
                 rectangularMatrix[i][j] = i;
                 System.out.print(rectangularMatrix[i][j]);
                 System.out.print(" ");
@@ -18,6 +18,6 @@ public class Rectangle {
 
         Rectangle rectangle = new Rectangle();
 
-        rectangle.rectangularMatrix(4);
+        rectangle.rectangularMatrix(2,5);
     }
 }

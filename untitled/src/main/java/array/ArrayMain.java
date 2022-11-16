@@ -22,11 +22,7 @@ public class ArrayMain {
         boolean[] trueFalse=new boolean[6];
 
         for (int i = 0; i < trueFalse.length; i++) {
-            if (i%2==0) {
-                trueFalse[i]=false;
-            }else {
-                trueFalse[i]=true;
-            }
+            trueFalse[i]= i % 2 != 0;
         }
 
         for (boolean b:trueFalse) {

@@ -16,8 +16,8 @@ public class Freezer {
         food.add("alma");
 
 
-        for (int i = 0; i < food.size() ; i++) {
-            System.out.println(food.get(i));
+        for (String f : food) {
+            System.out.println(f);
         }
 
         food.remove(2);

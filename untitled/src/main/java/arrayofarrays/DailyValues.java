@@ -1,5 +1,7 @@
 package arrayofarrays;
 
+import java.util.Arrays;
+
 public class DailyValues {
 
     public void getValues() {
@@ -7,8 +9,12 @@ public class DailyValues {
         int[] numberOfDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         for (int i = 0; i < numberOfDays.length; i++) {
             values[i] = new int[numberOfDays[i]];
+            System.out.println(Arrays.toString(values[i]));
         }
         printArrayOfArrays(values);
+
+
+
     }
 
     private void printArrayOfArrays(int[][] values) {
